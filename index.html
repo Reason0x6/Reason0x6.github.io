@@ -72,16 +72,7 @@
       <p>Pixel ratio: <span class="dpr"></span></p>
       <p>Max touch points: <span class="mtp"></span></p>
    </div>
-   <div class="panel connection">
-      <h2>MIDI</h2>
-      <p>MIDI access: <span class="rmi"></span></p>
-   </div>
-   <div class="panel allEvents">
-      <h2>Events:</h2>
-      <p>
-         <spsn class="events"></span>
-      </p>
-   </div>
+   
 
   <script>
     document.querySelector(".dpr").innerText = window.devicePixelRatio;
@@ -107,18 +98,6 @@ document.querySelector(".cet").innerText =
 document.querySelector(".cdl").innerText = window.navigator.connection.downlink;
 document.querySelector(".cdlm").innerText =
    window.navigator.connection.downlinkMax;
-document.querySelector(".rmi").innerText = window.navigator.requestMIDIAccess
-   ? "MIDI access available"
-   : "MIDI access not available";
 
-const eventHandlerList = Object.keys(window).filter(
-   (element) => element.indexOf("on") === 0
-);
-debugger;
-const eventsText = (document.querySelector(
-   ".events"
-).textContent = eventHandlerList.join(", "));
-console.log(eventsText);
-console.log("eventsText");
 
   </script>
