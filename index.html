@@ -5,9 +5,14 @@
   h2 {
    margin-top: 0;
 }
-
+.panel-container {
+   display: grid;
+   grid-template: repeat(3, 240px) / repeat(3, 240px);
+   grid-auto-flow: dense;
+   grid-gap: 12px 12px;
+}
 .panel {
-   background-color: rgb(192, 192, 255);
+   background-color: rgba(0,0,0,0.1);
    padding: 12px;
 }
 .panel__tall {
