@@ -1,1 +1,124 @@
 
+<h1>Diagnostics</h1>
+
+<style>
+  h2 {
+   margin-top: 0;
+}
+.panel-container {
+   display: grid;
+   grid-template: repeat(3, 240px) / repeat(3, 240px);
+   grid-auto-flow: dense;
+   grid-gap: 12px 12px;
+}
+.panel {
+   background-color: rgb(192, 192, 255);
+   padding: 12px;
+}
+.panel__tall {
+   grid-column-start: auto;
+   grid-column-end: auto;
+   grid-row-start: 1;
+   grid-row-end: 4;
+   align-self: stretch;
+}
+</style>
+<div class="panel-container">
+   <div class="panel panel__tall screen">
+      <h2>Screen</h2>
+      <h3 class="height">Height:</h3>
+      <p>Available height: <span class="sah"></span></p>
+      <p>Height: <span class="sh"></span></p>
+
+      <h3 class="height">Width:</h3>
+      <p>Available width: <span class="saw"></span></p>
+      <p>Width: <span class="sw"></span></p>
+
+      <h3 class="height">Color:</h3>
+      <p>Color depth: <span class="scd"></span></p>
+      <p>Pixel depth: <span class="spd"></span></p>
+
+      <h3 class="height">Orientation:</h3>
+      <p>Angle: <span class="oa"></span></p>
+      <p>Type: <span class="ot"></span></p>
+   </div>
+   <div class="panel panel__tall window">
+      <h2>Window</h2>
+      <h3 class="height">Height:</h3>
+      <p>Inner height: <span class="ih"></span></p>
+      <p>Outer height: <span class="oh"></span></p>
+
+      <h3 class="width">Width:</h3>
+      <p>Inner width: <span class="iw"></span></p>
+      <p>Outer width: <span class="ow"></span></p>
+      <h3 class="viewport">Viewport</h3>
+      <p>Visual viewport height: <span class="vvh"></span>
+      <p>Visual viewport width: <span class="vvw"></span>
+      <p>Visual viewport scale: <span class="vvs"></span>
+   </div>
+   <div class="panel connection">
+      <h2>Connection</h2>
+      <p>Type: <span class="ct"></span>
+      <p>
+      <p>Effective type: <span class="cet"></span>
+      <p>
+      <p>Downlink: <span class="cdl"></span>
+      <p>
+      <p>Downlink max: <span class="cdlm"></span>
+      <p>
+   </div>
+   <div class="panel display">
+      <h2 class="device">Display</h2>
+      <p>Pixel ratio: <span class="dpr"></span></p>
+      <p>Max touch points: <span class="mtp"></span></p>
+   </div>
+   <div class="panel connection">
+      <h2>MIDI</h2>
+      <p>MIDI access: <span class="rmi"></span></p>
+   </div>
+   <div class="panel allEvents">
+      <h2>Events:</h2>
+      <p>
+         <spsn class="events"></span>
+      </p>
+   </div>
+
+  <script>
+    document.querySelector(".dpr").innerText = window.devicePixelRatio;
+document.querySelector(".mtp").innerText = window.navigator.maxTouchPoints;
+document.querySelector(".sah").innerText = window.screen.availHeight;
+document.querySelector(".sh").innerText = window.screen.height;
+document.querySelector(".saw").innerText = window.screen.availWidth;
+document.querySelector(".scd").innerText = window.screen.colorDepth;
+document.querySelector(".spd").innerText = window.screen.pixelDepth;
+document.querySelector(".sw").innerText = window.screen.width;
+document.querySelector(".oa").innerText = window.screen.orientation.angle;
+document.querySelector(".ot").innerText = window.screen.orientation.type;
+document.querySelector(".ih").innerText = window.innerHeight;
+document.querySelector(".oh").innerText = window.outerHeight;
+document.querySelector(".iw").innerText = window.innerWidth;
+document.querySelector(".ow").innerText = window.outerWidth;
+document.querySelector(".vvh").innerText = window.visualViewport.height;
+document.querySelector(".vvw").innerText = window.visualViewport.width;
+document.querySelector(".vvs").innerText = window.visualViewport.scale;
+document.querySelector(".ct").innerText = window.navigator.connection.type;
+document.querySelector(".cet").innerText =
+   window.navigator.connection.effectiveType;
+document.querySelector(".cdl").innerText = window.navigator.connection.downlink;
+document.querySelector(".cdlm").innerText =
+   window.navigator.connection.downlinkMax;
+document.querySelector(".rmi").innerText = window.navigator.requestMIDIAccess
+   ? "MIDI access available"
+   : "MIDI access not available";
+
+const eventHandlerList = Object.keys(window).filter(
+   (element) => element.indexOf("on") === 0
+);
+debugger;
+const eventsText = (document.querySelector(
+   ".events"
+).textContent = eventHandlerList.join(", "));
+console.log(eventsText);
+console.log("eventsText");
+
+  </script>
