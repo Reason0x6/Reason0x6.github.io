@@ -59,6 +59,7 @@
           // Stop the countdown at 0
           if (countdownValue <= 0) {
             clearInterval(countdownInterval);
+             document.body.classList.remove("red-background");
           }
         }, 1000);
       }
