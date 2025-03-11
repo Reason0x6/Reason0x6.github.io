@@ -3,68 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reason0x6 - Software Engineer</title>
+    <title>Reason0x6 - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0c0c1d;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="flex flex-col items-center min-h-screen">
 
-    <header class="bg-gray-800 text-white text-center py-6">
-        <h1 class="text-3xl font-bold">Reason0x6</h1>
-        <p class="text-lg">Mid-Level Software Developer | TypeScript | .NET | Azure DevOps</p>
-    </header>
+    <!-- Navbar -->
+    <nav class="w-full max-w-6xl flex justify-between items-center py-6 px-4">
+        <h1 class="text-2xl font-bold">Portfolio</h1>
+        <ul class="flex space-x-6">
+            <li><a href="#" class="text-gray-400 hover:text-red-500">About</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-500">Portfolio</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-500">Contact</a></li>
+        </ul>
+        <a href="#" class="px-4 py-2 border rounded-lg border-gray-400 hover:bg-red-500 hover:text-white">Get Started</a>
+    </nav>
 
-    <section class="max-w-4xl mx-auto my-8 p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-        <p class="text-gray-700">
-            Software Engineer with experience in TypeScript, Angular, .NET, and Java. Passionate about building scalable,
-            maintainable software solutions and optimizing development workflows with Azure DevOps and CI/CD automation.
-        </p>
-    </section>
+    <!-- Hero Section -->
+    <section class="flex flex-col md:flex-row items-center text-center md:text-left max-w-6xl px-6 py-12">
+        <div class="md:w-1/2">
+            <h2 class="text-5xl font-bold">Hello, I am <br><span class="text-red-500">Reason0x6</span></h2>
+            <p class="text-gray-300 mt-4">A passionate software engineer working with TypeScript, .NET, and DevOps.</p>
+            
+            <!-- Social Icons -->
+            <div class="flex space-x-4 mt-4">
+                <a href="https://github.com/Reason0x6" class="text-gray-400 hover:text-red-500 text-2xl">🐙</a>
+                <a href="#" class="text-gray-400 hover:text-red-500 text-2xl">💼</a>
+                <a href="#" class="text-gray-400 hover:text-red-500 text-2xl">🔗</a>
+            </div>
 
-    <section class="max-w-4xl mx-auto my-8 p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-2xl font-semibold mb-4">Skills</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <span class="bg-blue-500 text-white px-4 py-2 rounded-lg">TypeScript</span>
-            <span class="bg-blue-500 text-white px-4 py-2 rounded-lg">JavaScript</span>
-            <span class="bg-blue-500 text-white px-4 py-2 rounded-lg">.NET</span>
-            <span class="bg-blue-500 text-white px-4 py-2 rounded-lg">Java</span>
-            <span class="bg-blue-500 text-white px-4 py-2 rounded-lg">Azure DevOps</span>
-            <span class="bg-blue-500 text-white px-4 py-2 rounded-lg">CI/CD</span>
-        </div>
-    </section>
-
-    <section class="max-w-4xl mx-auto my-8 p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-
-        <div class="bg-gray-100 p-4 rounded-lg mb-4">
-            <h3 class="text-xl font-semibold">
-                <a href="https://github.com/Reason0x6/FlightPub" target="_blank" class="text-blue-600 hover:underline">
-                    FlightPub
-                </a>
-            </h3>
-            <p class="text-gray-700">3rd Year Software Engineering Project using Spring Boot, Thymeleaf, and MongoDB.</p>
+            <!-- CTA Buttons -->
+            <div class="mt-6 space-x-4">
+                <a href="#" class="px-6 py-3 bg-red-500 text-white font-bold rounded-lg shadow-md hover:bg-red-600">Hire Me</a>
+                <a href="#" class="px-6 py-3 border border-gray-400 rounded-lg shadow-md hover:bg-gray-700">Portfolio</a>
+            </div>
         </div>
 
-        <div class="bg-gray-100 p-4 rounded-lg mb-4">
-            <h3 class="text-xl font-semibold">
-                <a href="https://www.biscit.com/solutions/applications/epicor-kinetic-wireless-warehouse/" target="_blank" 
-                   class="text-blue-600 hover:underline">
-                    Epicor Kinetic Wireless Warehouse
-                </a>
-            </h3>
-            <p class="text-gray-700">
-                A warehouse management solution for Epicor Kinetic ERP, enhancing inventory accuracy and warehouse efficiency.
-            </p>
+        <!-- Image -->
+        <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center">
+            <img src="profile.png" alt="Profile Image" class="rounded-lg shadow-lg max-w-xs md:max-w-sm">
         </div>
-
     </section>
-
-    <footer class="bg-gray-800 text-white text-center py-4 mt-8">
-        <p>Connect with me: 
-            <a href="https://github.com/Reason0x6" class="text-blue-400 hover:underline">GitHub</a> |
-            <a href="https://twitter.com/R3ason6" class="text-blue-400 hover:underline">Twitter</a>
-        </p>
-    </footer>
 
 </body>
 </html>
