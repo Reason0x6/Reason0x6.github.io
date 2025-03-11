@@ -1,68 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Countdown Timer</title>
-    <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: Arial, sans-serif;
-      }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reason0x6 - Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Reason0x6</h1>
+        <p>Software Engineer</p>
+    </header>
 
-      h1 {
-        font-size: 5rem;
-        color: black;
-      }
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Software Engineer with experience in TypeScript, Angular, .NET, and Java. Passionate about building scalable, maintainable software solutions and optimizing development workflows with Azure DevOps and CI/CD automation.</p>
+    </section>
 
-      .orange-background {
-        background-color: orange;
-      }
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>TypeScript, JavaScript, .NET, Java</li>
+            <li>Angular, Cordova, HTML, CSS</li>
+            <li>Azure DevOps, CI/CD, Infrastructure as Code (IaC)</li>
+            <li>REST APIs, SQL, Cypress</li>
+        </ul>
+    </section>
 
-      .red-background {
-        background-color: red;
-      }
-    </style>
-  </head>
-  <body onclick="startCountdown()">
-    <h1 id="timer">40</h1>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+    <h3><a href="https://www.biscit.com/solutions/applications/epicor-kinetic-wireless-warehouse/" target="_blank">
+        Epicor Kinetic Wireless Warehouse
+    </a></h3>
+    <p>A robust warehouse management solution built for Epicor Kinetic ERP. Designed to enhance inventory accuracy, improve operational efficiency, and streamline warehouse workflows with real-time data synchronization.</p>
+</div>
 
-    <script>
-      let countdownValue = 40;
-      let countdownInterval;
+      <div class="project">
+            <h3><a href="https://github.com/Reason0x6/FlightPub">FlightPub</a></h3>
+            <p>3rd Year Software Engineering Project for SENG3150 @ UoN. A Spring Boot web application with Thymeleaf and MongoDB integration.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
 
-      function startCountdown() {
-        clearInterval(countdownInterval); // Reset if pressed multiple times
-        countdownValue = 40; // Reset to 40 seconds
-        document.getElementById("timer").innerText = countdownValue;
-        document.body.classList.remove("orange-background", "red-background");
-
-        countdownInterval = setInterval(() => {
-          countdownValue--;
-
-          // Update the timer display
-          document.getElementById("timer").innerText = countdownValue;
-
-          // Change background color of body at 10 and 5 seconds
-          if (countdownValue <= 5) {
-            document.body.classList.add("red-background");
-          } else if (countdownValue <= 10) {
-            document.body.classList.add("orange-background");
-          }
-
-          // Stop the countdown at 0
-          if (countdownValue <= 0) {
-            clearInterval(countdownInterval);
-             document.body.classList.remove("red-background");
-          }
-        }, 1000);
-      }
-    </script>
-  </body>
+    <footer>
+        <p>Connect with me: 
+            <a href="https://github.com/Reason0x6">GitHub</a> | 
+            <a href="https://twitter.com/R3ason6">Twitter</a>
+        </p>
+    </footer>
+</body>
 </html>
